@@ -1,4 +1,4 @@
-name: snappass-test
+name: facundo-snappass-test
 description: |
     Test charm for Pinterest's SnapPass that uses Python Operator Framework
     and K8s sidecar containers.

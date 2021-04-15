@@ -7,10 +7,9 @@
 import logging
 
 from ops.charm import CharmBase
-from ops.framework import StoredState
 from ops.main import main
 from ops.model import ActiveStatus, ModelError
-from ops.pebble import ServiceInfo, ServiceStatus
+from ops.pebble import ServiceStatus
 
 logger = logging.getLogger(__name__)
 
@@ -84,8 +83,7 @@ class SnappassTestCharm(CharmBase):
         self._start_snappass()
 
     def _is_running(self, container, service):
-        """Helper method to determine if a given service is running
-        in a given container"""
+        """Determine if a given service is running in a given container."""
         try:
             service = container.get_service(service)
         except ModelError:
