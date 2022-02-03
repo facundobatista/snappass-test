@@ -1,5 +1,13 @@
 type: charm
 
 charmhub:
-    api_url: https://api.staging.charmhub.io
-    storage_url: https://storage.staging.snapcraftcontent.com
+    api-url: https://api.staging.charmhub.io
+    storage-url: https://storage.staging.snapcraftcontent.com
+
+bases:
+  - build-on:
+    - name: "ubuntu"
+      channel: "20.04"
+    run-on:
+    - name: "ubuntu"
+      channel: "20.04"
